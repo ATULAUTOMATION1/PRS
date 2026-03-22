@@ -64,14 +64,16 @@ export default function Hero() {
             fontSize: '1.25rem',
             lineHeight: 1.6,
             color: 'rgba(255, 255, 255, 0.8)',
-            maxWidth: '700px',
+            maxWidth: '750px',
             marginBottom: '45px',
             fontWeight: '500'
           }}>
-            PRS Group is a multi-disciplinary organization delivering at-scale expertise 
-            in Steel Engineering, Advanced Coatings, and Infrastructure Management. 
-            Building the core of industrial progress.
+            PRS GROUP is a multi-disciplinary construction and engineering company 
+            specializing in high-performance PEB and prefabricated solutions—delivering 
+            efficient, cost-effective structures tailored to the specific needs of 
+            industrial and infrastructure projects.
           </p>
+
 
 
           <div style={{ display: 'flex', gap: '20px', marginBottom: '60px' }}>
