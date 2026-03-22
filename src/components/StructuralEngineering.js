@@ -5,16 +5,19 @@ import { Building, Settings, Truck, Zap, HardHat, Cog, ClipboardCheck, ArrowRigh
 
 const sections = [
   {
-    title: "Facility 1: Specialized Steel & PEB Solutions",
-    description: "Engineering steel building systems with large clear spans and optimized material usage for warehouses and factories.",
+    title: "Facility 1: Advanced Pre-Engineered & Prefab Buildings",
+    description: "PRS GROUP is a professional leader in the design, fabrication, and precision installation of high-scale PEB and prefabricated solutions.",
     image: "/images/peb.png",
     icons: [
-      { name: "Custom PEB Design", icon: <Layout size={24} />, desc: "High-scale engineering with optimized material usage." },
-      { name: "Structural Erection", icon: <HardHat size={24} />, desc: "Expert on-site management and mechanical fastening." },
-      { name: "Prefabricated Modules", icon: <Building size={24} />, desc: "Rapid-deployment offices and durable labor camps." }
+      { name: "Pre-Engineered (PEB)", icon: <Building size={24} />, desc: "Custom steel building systems with large clear spans and optimized material usage for warehouses and factories." },
+      { name: "Prefabricated Systems", icon: <Layout size={24} />, desc: "Fast-deployment site offices, labor camps, and relocatable classrooms designed for repeatable use." },
+      { name: "Concrete Prefab", icon: <HardHat size={24} />, desc: "High-durability precast concrete panels and structural elements with high fire resistance." },
+      { name: "Composite Solutions", icon: <Settings size={24} />, desc: "Utilizing steel, concrete, and advanced materials for enhanced thermal performance and efficiency." },
+      { name: "Penalized Buildings", icon: <Building size={24} />, desc: "Flexible design with wall, floor, and roof panels for assembly on-site." }
     ]
   }
 ];
+
 
 export default function StructuralEngineering() {
   return (

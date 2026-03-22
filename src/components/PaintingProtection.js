@@ -100,21 +100,24 @@ export default function PaintingProtection() {
         <div style={{
           marginTop: '80px',
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
           gap: '20px'
         }}>
           {[
-            { label: "Anti-Corrosive Painting", icon: <Shield /> },
-            { label: "Bituminous Coatings", icon: <Droplets /> },
-            { label: "Acrylic Waterproofing", icon: <Activity /> },
-            { label: "Hydro Jetting Specialists", icon: <Crosshair /> }
+            { label: "Epoxy & PU Coating", icon: <Shield /> },
+            { label: "Bituminous & Aluminium", icon: <Droplets /> },
+            { label: "Acrylic & Emulsion", icon: <Activity /> },
+            { label: "Anti-Corrosive Systems", icon: <Shield /> },
+            { label: "Hydro Jet Cleaning", icon: <Crosshair /> },
+            { label: "Cement & Enamel Painting", icon: <Droplets /> }
           ].map((item, i) => (
-            <div key={i} className="glass-card" style={{ padding: '20px', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '10px' }}>
+            <div key={i} className="glass-card" style={{ padding: '24px', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '15px' }}>
               <div style={{ color: 'var(--primary)' }}>{item.icon}</div>
-              <div style={{ fontSize: '0.85rem', fontWeight: '800', textTransform: 'uppercase' }}>{item.label}</div>
+              <div style={{ fontSize: '0.85rem', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '1px' }}>{item.label}</div>
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );

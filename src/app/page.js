@@ -8,6 +8,7 @@ import PaintingProtection from "../components/PaintingProtection";
 import InfrastructureManagement from "../components/InfrastructureManagement";
 import SafetyManagement from "../components/SafetyManagement";
 import ProjectShowcase from "../components/ProjectShowcase";
+import CorporateGovernance from "../components/CorporateGovernance";
 import Footer from "../components/Footer";
 import WhatsAppCTA from "../components/WhatsAppCTA";
 
@@ -66,6 +67,7 @@ export default function Home() {
       <InfrastructureManagement />
       <SafetyManagement />
       <ProjectShowcase />
+      <CorporateGovernance />
       <Footer />
       <WhatsAppCTA />
     </main>
