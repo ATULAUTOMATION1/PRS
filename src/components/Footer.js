@@ -29,9 +29,9 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 style={{ marginBottom: '24px', fontSize: '1.1rem', color: '#fff', fontWeight: '800' }}>DELHI HQ</h4>
+            <h4 style={{ marginBottom: '24px', fontSize: '1.1rem', color: '#fff', fontWeight: '800' }}>REGISTERED OFFICE (DELHI)</h4>
             <p style={{ color: 'rgba(255,255,255,0.4)', marginBottom: '15px', fontSize: '0.95rem' }}>
-              Registered Office: New Delhi, India
+              House No.B-63, KH No-74/4, Laxmi Park Nangloi, Delhi-110041
             </p>
             <p style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.9rem' }}>
               Corporate coordination and strategic planning for national infrastructure projects.
@@ -39,9 +39,9 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 style={{ marginBottom: '24px', fontSize: '1.1rem', color: '#fff', fontWeight: '800' }}>JAMSHEDPUR HQ</h4>
+            <h4 style={{ marginBottom: '24px', fontSize: '1.1rem', color: '#fff', fontWeight: '800' }}>BRANCH OFFICE (JAMSHEDPUR)</h4>
             <p style={{ color: 'rgba(255,255,255,0.4)', marginBottom: '15px', fontSize: '0.95rem' }}>
-              Branch & Operations: Jamshedpur, Jharkhand
+              SHOP NO.- UB-76, AKASHDEEP PLAZA, Golmuri, Jamshedpur, East Singhbhum, Jharkhand- 831003
             </p>
             <p style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.9rem' }}>
               Operational hub serving TATA Steel and major industrial zones with on-ground expertise.
