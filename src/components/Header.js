@@ -18,13 +18,14 @@ export default function Header() {
   if (!mounted) return null;
 
   const navLinks = [
-    { name: "Advantage", href: "#services" },
-    { name: "Steel", href: "#structural" },
-    { name: "Coatings", href: "#coatings" },
-    { name: "Infra", href: "#infra" },
-    { name: "Safety", href: "#safety" },
-    { name: "Projects", href: "#projects" }
+    { name: "Home", href: "/" },
+    { name: "About Company", href: "#governance" },
+    { name: "Services", href: "#services" },
+    { name: "Projects", href: "#projects" },
+    { name: "Gallery", href: "#projects" },
+    { name: "Contact", href: "#contact" }
   ];
+
 
   return (
     <header style={{
