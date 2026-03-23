@@ -21,10 +21,10 @@ export default function Header() {
     { name: "Home", href: "/" },
     { name: "About Company", href: "#governance" },
     { name: "Services", href: "#services" },
-    { name: "Projects", href: "#projects" },
-    { name: "Gallery", href: "#projects" },
+    { name: "Portfolio", href: "#projects" },
     { name: "Contact", href: "#contact" }
   ];
+
 
 
   return (

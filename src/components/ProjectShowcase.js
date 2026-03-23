@@ -31,12 +31,21 @@ export default function ProjectShowcase() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
+            style={{ textAlign: 'center', background: '#000', padding: '10px 0' }}
           >
-            <h2 className="gradient-text">PORTFOLIO OF POWER</h2>
-            <p style={{ color: 'rgba(255, 255, 255, 0.4)', textTransform: 'uppercase', letterSpacing: '4px', fontWeight: '800' }}>
-              High-Caliber Industrial Success
-            </p>
+            <h2 style={{ 
+              fontSize: 'clamp(3rem, 10vw, 7rem)', 
+              fontWeight: '950', 
+              color: '#FFD700', 
+              lineHeight: 1, 
+              margin: '0',
+              fontFamily: 'var(--font-outfit)',
+              letterSpacing: '-2px'
+            }}>
+              PORTFOLIO OF POWER
+            </h2>
           </motion.div>
+
         </div>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: '80px' }}>
