@@ -42,8 +42,9 @@ export default function ProjectShowcase() {
               fontFamily: 'var(--font-outfit)',
               letterSpacing: '-2px'
             }}>
-              PORTFOLIO OF POWER
+              PROJECTS
             </h2>
+
           </motion.div>
 
         </div>
