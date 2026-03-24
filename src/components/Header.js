@@ -69,23 +69,17 @@ export default function Header() {
           
           <div style={{ width: '1px', height: '20px', background: 'rgba(255,255,255,0.1)' }} />
 
-          <a href="#contact">
-            <button className="primary-btn" style={{ 
+            <a href="#contact" className="primary-btn" style={{ 
               padding: '10px 20px', 
               fontSize: '0.75rem', 
-              display: 'flex', 
-              alignItems: 'center', 
-              gap: '10px',
-              background: '#FFD700',
-              color: '#000',
               border: 'none',
               borderRadius: '4px',
               fontWeight: '800',
               cursor: 'pointer'
             }}>
               <Download size={16} /> GROUP PROFILE
-            </button>
-          </a>
+            </a>
+
         </nav>
 
         {/* Mobile Toggle */}
@@ -140,21 +134,14 @@ export default function Header() {
                 </li>
               ))}
             </ul>
-            <a href="#contact" onClick={() => setMobileMenuOpen(false)}>
-              <button className="primary-btn" style={{ width: '100%', padding: '15px' }}>
-                DOWNLOAD GROUP PROFILE
-              </button>
+            <a href="#contact" className="primary-btn" style={{ width: '100%', padding: '15px' }} onClick={() => setMobileMenuOpen(false)}>
+              DOWNLOAD GROUP PROFILE
             </a>
+
           </motion.div>
         )}
       </AnimatePresence>
       
-      <style jsx>{`
-        @media (max-width: 991px) {
-          .desktop-nav { display: none !important; }
-          .mobile-toggle { display: block !important; }
-        }
-      `}</style>
     </header>
   );
 }

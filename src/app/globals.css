@@ -206,3 +206,10 @@ ul {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Header UI Responsiveness */
+@media (max-width: 991px) {
+  .desktop-nav { display: none !important; }
+  .mobile-toggle { display: block !important; }
+}
+

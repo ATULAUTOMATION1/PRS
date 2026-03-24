@@ -77,15 +77,11 @@ export default function Hero() {
 
 
           <div style={{ display: 'flex', gap: '20px', marginBottom: '60px' }}>
-            <a href="#services">
-              <button className="primary-btn">
+            <a href="#services" className="primary-btn">
                 DISCOVER OUR CAPACITY
-              </button>
             </a>
-            <a href="https://wa.me/919123456788" target="_blank" rel="noopener noreferrer">
-              <button className="secondary-btn">
+            <a href="https://wa.me/919123456788" target="_blank" rel="noopener noreferrer" className="secondary-btn">
                 TALK TO AN ENGINEER
-              </button>
             </a>
           </div>
 
