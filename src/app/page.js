@@ -1,20 +1,15 @@
 "use client";
 import React, { useEffect } from 'react';
 import Header from "../components/Header";
-import Hero from "../components/Hero";
-import Services from "../components/Services";
-import CoreCapabilities from "../components/CoreCapabilities";
-import SafetyManagement from "../components/SafetyManagement";
-import ProjectShowcase from "../components/ProjectShowcase";
+import AboutCharter from "../components/AboutCharter";
+import CoreServicesList from "../components/CoreServicesList";
+import Certifications from "../components/Certifications";
 import ContactForm from "../components/ContactForm";
-import CorporateGovernance from "../components/CorporateGovernance";
 import Footer from "../components/Footer";
 import WhatsAppCTA from "../components/WhatsAppCTA";
-import ClientMarquee from "../components/ClientMarquee";
 
 export default function Home() {
   useEffect(() => {
-    // Scroll Progress Logic
     const progressBar = document.getElementById('progress-bar');
     const updateScrollProgress = () => {
       const windowHeight = window.innerHeight;
@@ -24,50 +19,28 @@ export default function Home() {
       if (progressBar) progressBar.style.width = `${progress}%`;
     };
 
-    // Intersection Observer for Reveal Animations
-    const observerOptions = {
-      root: null,
-      threshold: 0.1
-    };
-
-    const revealCallback = (entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    };
-
-    const observer = new IntersectionObserver(revealCallback, observerOptions);
-    const sections = document.querySelectorAll('section');
-    sections.forEach(section => {
-      section.classList.add('reveal');
-      observer.observe(section);
-    });
-
     window.addEventListener('scroll', updateScrollProgress);
     return () => {
       window.removeEventListener('scroll', updateScrollProgress);
-      observer.disconnect();
     };
   }, []);
 
   return (
-    <main style={{ background: 'var(--background)' }}>
-      {/* Scroll Progress Indicator */}
+    <main style={{ background: 'transparent' }}>
       <div style={{ position: 'fixed', top: 0, left: 0, right: 0, height: '4px', background: 'rgba(255, 215, 0, 0.1)', zIndex: 1002 }}>
         <div id="progress-bar" style={{ height: '100%', width: '0%', background: '#FFD700', transition: 'width 0.2s ease-out' }}></div>
       </div>
 
       <Header />
-      <Hero />
-      <ClientMarquee />
-      <Services />
-      <CoreCapabilities />
-      <SafetyManagement />
-      <ProjectShowcase />
+      
+      {/* Dynamic exact content blocks */}
+      <div style={{ paddingTop: '100px' }}>
+        <AboutCharter />
+        <CoreServicesList />
+        <Certifications />
+      </div>
+
       <ContactForm />
-      <CorporateGovernance />
       <Footer />
       <WhatsAppCTA />
 

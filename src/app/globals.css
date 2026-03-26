@@ -21,7 +21,8 @@ html {
 }
 
 body {
-  background: var(--background);
+  background: linear-gradient(135deg, #0B3B8B 0%, #0A9396 30%, #5BE7C4 70%, #4A0E4E 100%);
+  background-attachment: fixed;
   color: #fff;
   font-family: var(--font-inter);
   line-height: 1.6;
@@ -56,6 +57,15 @@ ul {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
+.script-heading {
+  font-family: var(--font-caveat), cursive;
+  color: #FFA500;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
 
 .primary-btn {
   background: var(--primary);
