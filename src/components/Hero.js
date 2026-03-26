@@ -114,6 +114,44 @@ export default function Hero() {
             ))}
           </motion.div>
         </motion.div>
+
+        {/* Floating KPI Stat Card */}
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.8, duration: 0.8 }}
+          style={{
+            position: 'absolute',
+            right: '0',
+            top: '50%',
+            transform: 'translateY(-50%)',
+            background: 'rgba(10, 10, 10, 0.6)',
+            backdropFilter: 'blur(20px)',
+            border: '1px solid rgba(255,215,0,0.2)',
+            borderRadius: '24px',
+            padding: '40px',
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '30px',
+            boxShadow: '0 20px 40px rgba(0,0,0,0.5)'
+          }}
+          className="desktop-only-hero-card"
+        >
+          <div>
+            <div style={{ fontSize: '3rem', fontWeight: '900', color: 'var(--primary)', lineHeight: 1, fontFamily: 'var(--font-outfit)' }}>700+</div>
+            <div style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.6)', fontWeight: '700', textTransform: 'uppercase', marginTop: '5px' }}>Industrial Projects<br/>Delivered</div>
+          </div>
+          <div style={{ width: '100%', height: '1px', background: 'var(--border)' }}></div>
+          <div>
+            <div style={{ fontSize: '3rem', fontWeight: '900', color: '#fff', lineHeight: 1, fontFamily: 'var(--font-outfit)' }}>15<span style={{color: 'var(--primary)'}}>Y</span></div>
+            <div style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.6)', fontWeight: '700', textTransform: 'uppercase', marginTop: '5px' }}>Years of Engineering<br/>Excellence</div>
+          </div>
+          <div style={{ width: '100%', height: '1px', background: 'var(--border)' }}></div>
+          <div>
+            <div style={{ fontSize: '3rem', fontWeight: '900', color: '#fff', lineHeight: 1, fontFamily: 'var(--font-outfit)' }}>0.0</div>
+            <div style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.6)', fontWeight: '700', textTransform: 'uppercase', marginTop: '5px' }}>Lost Time Injury<br/>Record</div>
+          </div>
+        </motion.div>
       </div>
 
       {/* Hero Video Loop (Mock or Real if path provided) */}

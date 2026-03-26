@@ -4,7 +4,34 @@ import { motion } from 'framer-motion';
 import { Send, MapPin, Phone, Mail, Clock } from 'lucide-react';
 
 export default function ContactForm() {
+  const [status, setStatus] = React.useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus("sending");
+    
+    const formData = new FormData(e.target);
+    formData.append("access_key", "YOUR_ACCESS_KEY_HERE"); // The user needs to replace this
+
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      }).then((res) => res.json());
+
+      if (res.success) {
+        setStatus("success");
+        e.target.reset();
+      } else {
+        setStatus("error");
+      }
+    } catch (err) {
+      setStatus("error");
+    }
+  };
+
   return (
+
     <section id="contact-form" style={{ padding: '120px 0', background: 'var(--background)' }}>
       <div className="container">
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '80px', alignItems: 'start' }}>
@@ -77,32 +104,32 @@ export default function ContactForm() {
               position: 'relative'
             }}
           >
-            <form style={{ display: 'grid', gap: '25px' }}>
+            <form onSubmit={handleSubmit} style={{ display: 'grid', gap: '25px' }}>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }} className="responsive-grid">
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
                   <label style={{ fontSize: '0.8rem', fontWeight: '800', textTransform: 'uppercase', color: 'rgba(255,255,255,0.5)' }}>Full Name</label>
-                  <input type="text" placeholder="John Doe" style={inputStyle} />
+                  <input type="text" name="name" required placeholder="John Doe" style={inputStyle} />
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
                   <label style={{ fontSize: '0.8rem', fontWeight: '800', textTransform: 'uppercase', color: 'rgba(255,255,255,0.5)' }}>Company Name</label>
-                  <input type="text" placeholder="Industrial Corp" style={inputStyle} />
+                  <input type="text" name="company" placeholder="Industrial Corp" style={inputStyle} />
                 </div>
               </div>
 
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }} className="responsive-grid">
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
                   <label style={{ fontSize: '0.8rem', fontWeight: '800', textTransform: 'uppercase', color: 'rgba(255,255,255,0.5)' }}>Email Address</label>
-                  <input type="email" placeholder="john@example.com" style={inputStyle} />
+                  <input type="email" name="email" required placeholder="john@example.com" style={inputStyle} />
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
                   <label style={{ fontSize: '0.8rem', fontWeight: '800', textTransform: 'uppercase', color: 'rgba(255,255,255,0.5)' }}>Phone Number</label>
-                  <input type="tel" placeholder="+91 00000 00000" style={inputStyle} />
+                  <input type="tel" name="phone" placeholder="+91 00000 00000" style={inputStyle} />
                 </div>
               </div>
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
                 <label style={{ fontSize: '0.8rem', fontWeight: '800', textTransform: 'uppercase', color: 'rgba(255,255,255,0.5)' }}>Inquiry Subject</label>
-                <select style={inputStyle}>
+                <select name="subject" style={inputStyle}>
                   <option>Select a Service</option>
                   <option>Steel Engineering & PEB</option>
                   <option>Surface Protection & Coating</option>
@@ -113,14 +140,36 @@ export default function ContactForm() {
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
                 <label style={{ fontSize: '0.8rem', fontWeight: '800', textTransform: 'uppercase', color: 'rgba(255,255,255,0.5)' }}>Message</label>
-                <textarea rows="4" placeholder="Describe your project requirement..." style={inputStyle}></textarea>
+                <textarea name="message" required rows="4" placeholder="Describe your project requirement..." style={inputStyle}></textarea>
               </div>
 
-              <button className="primary-btn" style={{ width: '100%', padding: '20px', borderRadius: '12px', display: 'flex', justifyContent: 'center', gap: '10px' }}>
-                <Send size={20} /> SEND REQUISITION
+              <button 
+                type="submit"
+                disabled={status === "sending"}
+                className="primary-btn" 
+                style={{ 
+                  width: '100%', 
+                  padding: '20px', 
+                  borderRadius: '12px', 
+                  display: 'flex', 
+                  justifyContent: 'center', 
+                  gap: '10px',
+                  opacity: status === "sending" ? 0.7 : 1,
+                  cursor: status === "sending" ? 'not-allowed' : 'pointer'
+                }}
+              >
+                <Send size={20} /> 
+                {status === "sending" ? "SENDING..." : status === "success" ? "SENT SUCCESSFULLY!" : "SEND REQUISITION"}
               </button>
+
+              {status === "error" && (
+                <p style={{ color: '#ff4d4d', fontSize: '0.9rem', textAlign: 'center', marginTop: '10px' }}>
+                  Something went wrong. Please try again or email us directly.
+                </p>
+              )}
             </form>
           </motion.div>
+
 
         </div>
       </div>

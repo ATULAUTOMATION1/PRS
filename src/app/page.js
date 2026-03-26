@@ -3,15 +3,14 @@ import React, { useEffect } from 'react';
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Services from "../components/Services";
-import StructuralEngineering from "../components/StructuralEngineering";
-import PaintingProtection from "../components/PaintingProtection";
-import InfrastructureManagement from "../components/InfrastructureManagement";
+import CoreCapabilities from "../components/CoreCapabilities";
 import SafetyManagement from "../components/SafetyManagement";
 import ProjectShowcase from "../components/ProjectShowcase";
 import ContactForm from "../components/ContactForm";
 import CorporateGovernance from "../components/CorporateGovernance";
 import Footer from "../components/Footer";
 import WhatsAppCTA from "../components/WhatsAppCTA";
+import ClientMarquee from "../components/ClientMarquee";
 
 export default function Home() {
   useEffect(() => {
@@ -62,10 +61,9 @@ export default function Home() {
 
       <Header />
       <Hero />
+      <ClientMarquee />
       <Services />
-      <StructuralEngineering />
-      <PaintingProtection />
-      <InfrastructureManagement />
+      <CoreCapabilities />
       <SafetyManagement />
       <ProjectShowcase />
       <ContactForm />

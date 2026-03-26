@@ -213,3 +213,7 @@ ul {
   .mobile-toggle { display: block !important; }
 }
 
+@media (max-width: 1024px) {
+  .desktop-only-hero-card { display: none !important; }
+}
+
