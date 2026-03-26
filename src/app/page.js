@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import Header from "../components/Header";
 import AboutCharter from "../components/AboutCharter";
 import CoreServicesList from "../components/CoreServicesList";
+import ProjectShowcaseCards from "../components/ProjectShowcaseCards";
 import Certifications from "../components/Certifications";
 import ContactForm from "../components/ContactForm";
 import Footer from "../components/Footer";
@@ -37,6 +38,7 @@ export default function Home() {
       <div style={{ paddingTop: '100px' }}>
         <AboutCharter />
         <CoreServicesList />
+        <ProjectShowcaseCards />
         <Certifications />
       </div>
 
